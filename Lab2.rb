@@ -212,4 +212,5 @@ c = CartesianProduct.new([:a, :b], [4, 5])
 c.each{ |elt| puts elt.inspect}
 c = CartesianProduct.new([:a, :b], [])
 #note this prints nothing because second array is empty
+puts "Nothing should be printed for this test case:"
 c.each{ |elt| puts elt.inspect}
