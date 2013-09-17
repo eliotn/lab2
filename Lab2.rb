@@ -173,6 +173,7 @@ puts rps_tournament_winner([[[["Armando", "P"], ["Dave", "S"]],
     [["David E.", "R"], ["Richard X.", "P"]]]]).to_s;
 puts "Anagram combination test:"
 puts combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four', 'scar', 'creams', 'scream']).to_s;
+puts combine_anagrams(['Doe', 'ode']).to_s
 puts "Classes tests:";
 des = Dessert.new("Delete me", 0);
 des.name = "1 calorie dessert";
