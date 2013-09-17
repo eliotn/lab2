@@ -134,12 +134,13 @@ end
 #makes an array with the cross producted elements, and does an each on the block
 class CartesianProduct
   include Enumerable
-  def initialize(part1, part2)
-    @self = []
-    part1.each{|elem1| part2.each{ |elem2| @self.push([elem1, elem2])}};
+  attr_accessor :leftarray, :rightarray
+  def initialize(leftarray, rightarray)
+    @leftarray = leftarray
+    @rightarray = rightarray
   end
   def each(&block)
-    @self.each(&block)
+    leftarray.each {|value1| rightarray.each{|value2| yield [value1, value2]}}
   end
 end
 
