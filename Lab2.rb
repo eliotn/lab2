@@ -89,8 +89,7 @@ end
 
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
-    @name = name
-    @calories = calories
+    super(name, calories)
     @flavor = flavor
   end
   attr_accessor :flavor
@@ -181,10 +180,10 @@ des.calories = 1;
 puts des.name + " has " + des.calories.to_s + " calories!";
 puts "Delicious: " + des.delicious?.to_s + " Healthy: " + des.healthy?.to_s;
 des2 = JellyBean.new("Delete me", 0, "nothing");
-puts des2.flavor + " is Delicious? " + des.delicious?.to_s;
+puts des2.flavor + " is Delicious? " + des2.delicious?.to_s;
 des2.name = "Black Licorice";
 des2.flavor = "black licorice";
-puts des2.name + " is Delicious? " + des.delicious?.to_s
+puts des2.name + " is Delicious? " + des2.delicious?.to_s
 puts "attr_accessor tests";
 class Foo
   attr_accessor_with_history :bar
