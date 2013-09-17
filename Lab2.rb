@@ -63,7 +63,7 @@ end
 #find all letter combinations, then map each word to a unique index in an array based on each unique letter combination
 #finally create the array with each valid subarray
 def combine_anagrams(strings)
-  lettercombinations = strings.map{|string| string.count_regex(/\w/)}
+  lettercombinations = strings.map{|string| string.downcase.count_regex(/\w/)}
   lettercombinationsunique = lettercombinations.uniq
   lettercombinationsindex = lettercombinations.map{|lettercombination| lettercombinationsunique.index(lettercombination)}
   newarray = lettercombinationsunique.map{[]}#pitfall, new will make the same copy of the array throughout
